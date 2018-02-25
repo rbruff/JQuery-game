@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -8,30 +9,49 @@
 
     <title>Shopping Spree!</title>
 </head>
+
 <body>
-    <div class="header">Shopping Spree!</div>
-    <div class="intructions">
-        <p>You will be given a random shopping limit at the start of the game. <br> There are four things on sale below. By clicking on each item you will add a specific amount to the money you spent shopping. <br> You win the game by matching your money spent to the shopping limit given. You lose the game if you spend more than the limit. <br> The value of each item is hidden from you until you click on it. <br> Each time you start a new game with a new limit, the value of each item will change. </p>
+    <p class="header">Shopping Spree!</p>
+    <div class="instructions">
+        <p>You will be given a random shopping limit at the start of the game.
+            <br> There are four things on sale below. By clicking on each item you will add a specific amount to the money you
+            spent shopping.
+            <br> You win the game by matching your money spent to the shopping limit given. You lose the game if you spend more
+            than the limit.
+            <br> The value of each item is hidden from you until you click on it.
+            <br> Each time you start a new game with a new limit, the value of each item will change. </p>
     </div>
-    <div class="shopping-lim">
-        <p>Shopping limit: <br>$<span id="random-num">37</span></p>
+
+    <div class="row-container">
+        <div class="shopping-lim">
+            <p>Shopping limit:
+                <br>$
+                <span id="random-num">37</span>
+            </p>
+        </div>
+        <div class="scoreboard">
+            <p id="status">Buy somthing...</p>
+            <p>Wins:
+                <span id="wins">0</span>
+            </p>
+            <p>Losses:
+                <span id="losses">0</span>
+            </p>
+        </div>
     </div>
-    <div class="scoreboard">
-        <p id="status">Buy somthing...</p>
-        <p>Wins: <span id="wins">0</span></p>
-        <p>Losses: <span id="losses">0</span></p>
-    </div>
-    <div class="clothes">
+    <div class="clothes row-container">
         <img id="item" src="assets/images/001-clothes-1.png" alt="Shorts">
         <img id="item" src="assets/images/002-fashion.png" alt="Heels">
         <img id="item" src="assets/images/003-beach.png" alt="Swimsuit">
         <img id="item" src="assets/images/004-clothes.png" alt="Dress">
     </div>
     <div class="guess-score">
-        <p>Money Spent: <br>
-            $<span id="spent">0</span>
+        <p>Money Spent:
+            <br> $
+            <span id="spent">0</span>
         </p>
     </div>
-    
+
 </body>
+
 </html>

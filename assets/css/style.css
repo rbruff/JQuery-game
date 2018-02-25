@@ -1,0 +1,50 @@
+body {
+    background-image: url(../images/flowery-3163512_1280.png);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+.header, .instructions{
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    margin: 10px auto 10px auto;
+}
+.row-container {
+    display: flex;
+    margin: 10px auto 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+.scoreboard, .shopping-lim, .guess-score {
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+.scoreboard {
+    background-color: #b4bfe1;
+}
+.shopping-lim {
+    background-color: #b3cfec;
+}
+.guess-score {
+    margin: auto;
+    background-color:  #fae480;
+    border: 1px solid;
+}
+.header {
+    background-color: #ea8883;
+}
+
+.instructions {
+    background-color: #97c670;
+}
+.clothes {
+    background-color: #ffffffe0;
+    width: 800px;
+}
+#item {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+}
