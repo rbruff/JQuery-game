@@ -68,6 +68,9 @@ var startGame = function() {
   console.log("shorts: " + saleItem.shorts.value + " | swimsuit: " + saleItem.swimsuit.value + " | heels: " + saleItem.heels.value +
     " | dress: " + saleItem.dress.value);
   console.log("-----------------------------------");
+
+  // // Changes status to Buy something
+  // $("#status").text("Buy somthing...");
 };
 
 // Check if User Won or Lost and Reset the Game
@@ -75,28 +78,28 @@ var checkWin = function() {
 
   // Check if currentScore is larger than targetScore
   if (currentScore > targetScore) {
-    alert("Sorry. You lost!");
+    $("#status").text("Sorry. You lost!");
     console.log("You Lost");
 
     // Add to Loss Counter
     lossCount++;
 
     // Change Loss Count HTML
-    $("#loss-count").text(lossCount);
+    $("#losses").text(lossCount);
 
     // Restart the game
     startGame();
   }
 
   else if (currentScore === targetScore) {
-    alert("Congratulations! You Won!");
+    $("#status").text("Congratulations! You Won!");
     console.log("You Won!");
 
     // Add to the Win Counter
     winCount++;
 
     // Change Win Count HTML
-    $("#win-count").text(winCount);
+    $("#wins").text(winCount);
 
     // Restart the game
     startGame();
@@ -111,7 +114,7 @@ var addValues = function(clickedsaleItem) {
   currentScore += clickedsaleItem.value;
 
   // Change the HTML to reflect changes in currentScore
-  $("#your-score").text(currentScore);
+  $("#spent").text(currentScore);
 
   // Call the checkWin Function
   checkWin();
