@@ -3,23 +3,19 @@
 
 // Sale item Variables
 var saleItem = {
-  shorts:
-  {
+  shorts: {
     name: "shorts",
     value: 0
   },
-  heels:
-  {
+  heels: {
     name: "heels",
     value: 0
   },
-  swimsuit:
-  {
+  swimsuit: {
     name: "swimsuit",
     value: 0
   },
-  dress:
-  {
+  dress: {
     name: "dress",
     value: 0
   }
@@ -38,12 +34,12 @@ var lossCount = 0;
 // =================================================================
 
 // Function for getting random numbers with range parameters
-var getRandom = function(min, max) {
+var getRandom = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 // Starts the Game (and restarts the game)
-var startGame = function() {
+var startGame = function () {
 
   // Reset the Current Score
   currentScore = 0;
@@ -74,7 +70,7 @@ var startGame = function() {
 };
 
 // Check if User Won or Lost and Reset the Game
-var checkWin = function() {
+var checkWin = function () {
 
   // Check if currentScore is larger than targetScore
   if (currentScore > targetScore) {
@@ -89,9 +85,7 @@ var checkWin = function() {
 
     // Restart the game
     startGame();
-  }
-
-  else if (currentScore === targetScore) {
+  } else if (currentScore === targetScore) {
     $("#status").text("Congratulations! You Won!");
     console.log("You Won!");
 
@@ -108,7 +102,7 @@ var checkWin = function() {
 };
 
 // Respond to clicks on the saleItems
-var addValues = function(clickedsaleItem) {
+var addValues = function (clickedsaleItem) {
 
   // Change currentScore
   currentScore += clickedsaleItem.value;
@@ -129,18 +123,18 @@ var addValues = function(clickedsaleItem) {
 // Starts the Game the First Time.
 startGame();
 
-$("#shorts").click(function() {
+$("#shorts").click(function () {
   addValues(saleItem.shorts);
 });
 
-$("#heels").click(function() {
+$("#heels").click(function () {
   addValues(saleItem.heels);
 });
 
-$("#swimsuit").click(function() {
+$("#swimsuit").click(function () {
   addValues(saleItem.swimsuit);
 });
 
-$("#dress").click(function() {
+$("#dress").click(function () {
   addValues(saleItem.dress);
 });
