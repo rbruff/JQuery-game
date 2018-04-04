@@ -42,7 +42,7 @@ body {
     background-color: #ffffffe0;
     width: 800px;
 }
-#item {
+.items {
     width: 150px;
     height: 150px;
     margin: 10px;
